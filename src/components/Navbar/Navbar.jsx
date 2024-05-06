@@ -1,30 +1,40 @@
 import { useState } from 'react';
 import { useContext } from "react";
-// import { useOutletContext } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 import { UserContext } from "../../contexts/userContext";
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
     // State to manage the navbar's visibility
     const [nav, setNav] = useState(false);
+    const navigate = useNavigate();
 
     // Toggle function to handle the navbar's display
     const handleNav = () => {
         setNav(!nav);
     };
 
-    // const [setIsLogged] = useOutletContext()
+    const [setIsLogged] = useOutletContext()
     const user = useContext(UserContext);
 
     // Array containing navigation items
     const navItems = [
-        { id: 1, text: 'Inicio' },
-        { id: 2, text: 'Cursos' },
-        { id: 3, text: 'Nosotros' },
-        { id: 4, text: 'Contacto' },
-        { id: 5, text: user?.name },
-        { id: 6, text: 'Salir' }
+        { id: 1, text: 'Inicio', route: '/tweets' },
+        { id: 2, text: 'Cursos', route: '/mainpage' },
+        { id: 3, text: 'Nosotros', route: '' },
+        { id: 4, text: 'Contacto', route: '' },
+        { id: 5, text: user?.name, route: '' },
+        { id: 6, text: 'Salir', route: '' }
     ];
+
+    function setClick(item){
+        if(item.id === 6){
+            setIsLogged(false)
+        } else {
+            navigate(item.route)
+        }
+    }
 
     return (
         <>
@@ -33,15 +43,27 @@ const Navbar = () => {
                 <h1 className='w-full text-3xl font-bold text-[#00df9a]'>E-Learning</h1>
 
                 {/* Desktop Navigation */}
-                <ul className='hidden md:flex'>
-                    {navItems.map(item => {
+                {/* <ul className='hidden md:flex'>
+                    {navItems.map((item) => (
                         <li
                             key={item.id}
                             className='sm:align-middle md:align-bottom lg:align-text-top xl:align-text-bottom p-4 hover:bg-[#00df9a] rounded-xl m-2 cursor-pointer duration-300 hover:text-black'
+                            onClick={() => navigate(item.route)}
                         >
                             {item.text}
                         </li>
-                    })}
+                    ))}
+                </ul> */}
+                <ul className='hidden md:flex'>
+                    {navItems.map((item) => (
+                        <li
+                            key={item.id}
+                            className='sm:align-middle md:align-bottom lg:align-text-top xl:align-text-bottom p-4 hover:bg-[#00df9a] rounded-xl m-2 cursor-pointer duration-300 hover:text-black'
+                            onClick={() => setClick(item)}
+                        >
+                            {item.text}
+                        </li>
+                    ))}
                 </ul>
 
                 {/* Mobile Navigation Icon */}
@@ -61,14 +83,14 @@ const Navbar = () => {
                     <h1 className='w-full text-3xl font-bold text-[#00df9a] m-4'>E-Learning</h1>
 
                     {/* Mobile Navigation Items */}
-                    {navItems.map(item => {
+                    {navItems.map(item => (
                         <li
                             key={item.id}
                             className='sm:align-middle md:align-bottom lg:align-text-top xl:align-text-bottom p-4 border-b rounded-xl hover:bg-[#00df9a] duration-300 hover:text-black cursor-pointer border-gray-600'
                         >
                             {item.text}
                         </li>
-                    })}
+                    ))}
                 </ul>
             </div>
 
