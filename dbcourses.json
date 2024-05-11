@@ -1,0 +1,55 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "descripcion": "En este curso, te embarcarás en un viaje de descubrimiento a través de los principios esenciales de las matemáticas. Desde la aritmética básica hasta la geometría y el álgebra, explorarás conceptos clave de manera interactiva y dinámica.",
+      "nombre": "Matematicas",
+      "intesidad_h": "6 horas semanales",
+      "Duracion": "12 semanas",
+      "Precio": "22 cop",
+      "Profesor": "Andres Carrillo,ph",
+      "profileImage": "https://randomuser.me/api/portraits/men/0.jpg"
+      
+    },
+    {
+      "id": "2",
+      "descripcion": "¡Bienvenido al curso virtual de Química! En este emocionante viaje, explorarás los fundamentos de la química, desde la estructura atómica hasta las reacciones químicas. A través de lecciones interactivas, laboratorios virtuales y ejercicios prácticos, adquirirás una comprensión profunda de cómo interactúan las sustancias y cómo podemos manipularlas para resolver problemas y mejorar nuestra comprensión del mundo que nos rodea. ¡Prepárate para descubrir la ciencia que está detrás de todo lo que nos rodea!",
+      "nombre": "Química",
+      "intesidad_h": "5 horas semanales",
+      "Duracion": "10 semanas",
+      "Precio": "20 cop",
+      "Profesor": "Dra. María García, Ph.D.",
+      "profileImage": "https://randomuser.me/api/portraits/men/0.jpg"
+    },
+    {
+      "id": "3",
+      "descripcion": "Descubre los secretos mejor guardados del mundo natural con nuestro curso virtual de Biología. Sumérgete en el estudio de la vida en todas sus formas, desde las estructuras microscópicas de las células hasta los intrincados ecosistemas que sustentan la biodiversidad del planeta. A través de una combinación de fascinantes lecciones, exploraciones prácticas y emocionantes descubrimientos, este curso te llevará en un viaje único de comprensión y asombro por la increíble diversidad y complejidad de la vida en la Tierra.",
+      "nombre": "Biologia",
+      "intesidad_h": "6 horas semanales",
+      "Duracion": "12 semanas",
+      "Precio": "20 cop",
+      "Profesor": "Dr. Javier López,",
+      "profileImage": "https://randomuser.me/api/portraits/men/0.jpg"
+    },
+    {
+      "id": "4",
+      "descripcion": " Este curso virtual te invita a explorar los misterios del universo y las leyes fundamentales que rigen el comportamiento de la materia y la energía. Desde la mecánica clásica hasta la física cuántica, te sumergirás en un viaje de descubrimiento a través de los principios físicos que explican el funcionamiento del cosmos y del mundo que nos rodea. A través de lecciones interactivas, experimentos virtuales y ejercicios prácticos, desarrollarás una comprensión profunda de los fenómenos físicos y su aplicación en la vida cotidiana y en la investigación científica.",
+      "nombre": "Fisica",
+      "intesidad_h": "8 horas semanales",
+      "Duracion": "12 semanas",
+      "Precio": "25 cop",
+      "Profesor": "Andres fernandez,ph,",
+      "profileImage": "https://randomuser.me/api/portraits/men/0.jpg"
+    },
+    {
+      "id": "5",
+      "descripcion": "Sumérgete en el emocionante campo de la electrónica con nuestro curso virtual. Desde los circuitos básicos hasta los dispositivos electrónicos más avanzados, este curso te llevará en un viaje de descubrimiento a través de los principios fundamentales y las aplicaciones prácticas de la electrónica. Con lecciones interactivas, laboratorios virtuales y proyectos emocionantes, explorarás cómo la electrónica está transformando nuestro mundo y definiendo el futuro de la tecnología.",
+      "nombre": "Electronica",
+      "intesidad_h": "8 horas semanales",
+      "Duracion": "14 semanas",
+      "Precio": "30 cop",
+      "Profesor": "Marina López,",
+      "profileImage": "https://randomuser.me/api/portraits/men/0.jpg"
+    }
+  ]
+}
