@@ -1,26 +1,30 @@
-// import { useContext, useState } from "react"
-// import { UserContext } from "../../contexts/userContext"
+ import { useContext, useState } from "react"
+ import { UserContext } from "../../contexts/userContext"
 
-// function CreateCourses({ onCreate }) {
-//     const [CourseText, setCourseText] = useState('')
-//     const user = useContext(UserContext)
+ function CreateCourses() {
+    const [courses,setCourses] =useState([])
+     
 
-//     function createCourses(){
-//         onCreate(CourseText)
-//         setTweetText('')
-//     }
+    useEffect(() => {
+        fetch('dbcourses.json') // Ruta al archivo JSON
+          .then(response => response.json())
+          .then(data => setCourses(data.courses))
+          .catch(error => console.error('Error al cargar los cursos:', error));
+      }, []);
+    
+      return (
+        <div>
+          <h1>Cursos Disponibles</h1>
+          <ul>
+            {courses.map(course => (
+              <li key={course.id}>
+                <h2>{course.nombre}</h2>
+                <img src={course.profileImage} alt="Imagen del profesor" />
+              </li>
+            ))}
+          </ul>
+        </div>
+      );
+    }
 
-//     return (
-//         <section className="flex p-4 gap-4 w-full">
-//             <div><img className="w-10 h-10 rounded-full" src={user?.profileImage} alt={user?.name} /></div>
-//             <div className="flex flex-col gap-1 flex-1">
-//                 <input className="bg-black text-xl mb-2" type="text" name="tweetText" id="tweetText" placeholder="What is happening?!" value={tweetText} onChange={(e) => setTweetText(e.target.value)} />
-//                 <div className="flex justify-end">
-//                     <button className="bg-sky-500 px-4 py-1 rounded-full font-bold hover:bg-sky-600 transition" onClick={createTweet}>Post</button>
-//                 </div>
-//             </div>
-//         </section>
-//     )
-// }
-
-// export default CreateCourses
+ export default CreateCourses
