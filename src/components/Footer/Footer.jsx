@@ -13,12 +13,7 @@ const footerSections = [
     title: "CodeCraft",
     content:
       "Somos una academia de estudios en línea enfocada en el desarrollo personal y profesional de nuestros aprendices.",
-    footerText: "@Equipo 2024 All rights Reserved",
-    links: [
-      { label: "Resources", url: "#" },
-      { label: "Contact us", url: "#" },
-      { label: "Blog", url: "#" },
-    ],
+    footerText: "@Equipo 2024 All rights Reserved"
   },
   {
     title: "Ayuda",
@@ -31,9 +26,9 @@ const footerSections = [
   {
     title: "E-Learning",
     links: [
-      { label: "Cursos", url: "#" },
-      { label: "Nosotros", url: "#" },
-      { label: "Contacto", url: "#" },
+      { label: "Cursos", url: "/courses" },
+      { label: "Nosotros", url: "/about" },
+      { label: "Contacto", url: "/contact" },
     ],
   },
   {
@@ -48,12 +43,12 @@ const footerSections = [
 const Footer = () => {
   return (
     <>
-      <section className="fotter p-3 md:p-8 mt-6 bg-black text-white">
+      <section className="fotter p-3 md:p-8 bg-black text-white">
         <div className="flex flex-col md:flex-row items-center mx-auto md:mx-0 justify-between w-full p-4">
           <div className="dev font-nun w-full md:w-1/2 mt-12 md:mt-0">
             <div className="flex flex-row items-center justify-start">
               <div className="logo w-20 mr-5">
-                <img src={logo} alt="" />
+                <img src={logo} alt="" href="home"/>
               </div>
               <h1 className="font-bold text-[#00df9a] text-2xl">E-Learning</h1>
             </div>

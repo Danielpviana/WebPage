@@ -4,6 +4,7 @@ import { useOutletContext } from "react-router-dom";
 import { UserContext } from "../../contexts/userContext";
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { useNavigate } from 'react-router-dom';
+import logo from '../../assets/images/e-logo.jpg';
 
 const Navbar = () => {
     // State to manage the navbar's visibility
@@ -20,16 +21,16 @@ const Navbar = () => {
 
     // Array containing navigation items
     const navItems = [
-        { id: 1, text: 'Inicio', route: '/tweets' },
-        { id: 2, text: 'Cursos', route: '/mainpage' },
-        { id: 3, text: 'Nosotros', route: '' },
-        { id: 4, text: 'Contacto', route: '' },
+        { id: 1, text: 'Inicio', route: '/home' },
+        { id: 2, text: 'Cursos', route: '/courses' },
+        { id: 3, text: 'Nosotros', route: '/about' },
+        { id: 4, text: 'Contacto', route: '/contact' },
         { id: 5, text: user?.name, route: '' },
         { id: 6, text: 'Salir', route: '' }
     ];
 
-    function setClick(item){
-        if(item.id === 6){
+    function setClick(item) {
+        if (item.id === 6) {
             setIsLogged(false)
         } else {
             navigate(item.route)
@@ -40,6 +41,8 @@ const Navbar = () => {
         <>
             <div className='bg-black flex justify-between items-center h-24 max-w-[1920px] mx-auto px-4 text-white'>
                 {/* Logo */}
+                <img className='logo w-20 mr-5' src={logo}/>
+                
                 <h1 className='w-full text-3xl font-bold text-[#00df9a]'>E-Learning</h1>
 
                 {/* Desktop Navigation */}
@@ -83,10 +86,11 @@ const Navbar = () => {
                     <h1 className='w-full text-3xl font-bold text-[#00df9a] m-4'>E-Learning</h1>
 
                     {/* Mobile Navigation Items */}
-                    {navItems.map(item => (
+                    {navItems.map((item) => (
                         <li
                             key={item.id}
                             className='sm:align-middle md:align-bottom lg:align-text-top xl:align-text-bottom p-4 border-b rounded-xl hover:bg-[#00df9a] duration-300 hover:text-black cursor-pointer border-gray-600'
+                            onClick={() => setClick(item)}
                         >
                             {item.text}
                         </li>
