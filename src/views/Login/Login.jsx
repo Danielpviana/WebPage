@@ -20,7 +20,7 @@ function Login() {
     // TODO deberia consumir un API de login contra el servidor, normalmente se utiliza algo como JWT
     if (username === USER_LOGIN_DEFAULT.username && password === USER_LOGIN_DEFAULT.password) {
       setIsLogged(true)
-      navigate('/tweets')
+      navigate('/home')
     } else {
       alert('usuario incorrecto')
     }
