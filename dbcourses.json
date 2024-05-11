@@ -1,3 +1,5 @@
+
+
 {
   "courses": [
     {
@@ -8,7 +10,7 @@
       "Duracion": "12 semanas",
       "Precio": "22 cop",
       "Profesor": "Andres Carrillo,ph",
-      "profileImage": "https://randomuser.me/api/portraits/men/0.jpg"
+      "profileImage": "../../assets/images/logo_math.png"
       
     },
     {
@@ -19,7 +21,7 @@
       "Duracion": "10 semanas",
       "Precio": "20 cop",
       "Profesor": "Dra. María García, Ph.D.",
-      "profileImage": "https://randomuser.me/api/portraits/men/0.jpg"
+      "profileImage": "../../assets/images/quimica.png"
     },
     {
       "id": "3",
@@ -29,7 +31,8 @@
       "Duracion": "12 semanas",
       "Precio": "20 cop",
       "Profesor": "Dr. Javier López,",
-      "profileImage": "https://randomuser.me/api/portraits/men/0.jpg"
+      "profileImage": "../../assets/images/biologia.jpg"
+  
     },
     {
       "id": "4",
@@ -39,7 +42,7 @@
       "Duracion": "12 semanas",
       "Precio": "25 cop",
       "Profesor": "Andres fernandez,ph,",
-      "profileImage": "https://randomuser.me/api/portraits/men/0.jpg"
+      "profileImage": "../../assets/images/fisica.jpg"
     },
     {
       "id": "5",
