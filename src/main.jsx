@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Layout from './components/Layout/Layout.jsx';
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
   Navigate
 } from "react-router-dom";
@@ -16,7 +16,7 @@ import Contact from './views/Contact/Contact.jsx';
 import Courses from './views/Courses/Courses.jsx';
 import CourseDetails from './views/CoursesDetails/CourseDetails.jsx';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: '/',
     element: <App />,

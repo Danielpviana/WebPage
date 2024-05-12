@@ -12,7 +12,7 @@ function CourseCard({ courseData }) {
                     <img src={course.profileImage} className="w-100 h-40 mb-3" />
                     <div className="p-4 pt-2">
                         <div className="mb-8">
-                            <a href={'/courses/'+course.id} className="text-gray-900 font-bold text-lg mb-2 hover:text-[#00df9a] inline-block">{course.nombre}</a>
+                            <a href={'#/courses/'+course.id} className="text-gray-900 font-bold text-lg mb-2 hover:text-[#00df9a] inline-block">{course.nombre}</a>
                             <p className="text-gray-700 text-sm">{course.shortDescription}</p>
                         </div>
                         <div className="flex items-center justify-between">
