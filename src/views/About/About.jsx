@@ -29,8 +29,8 @@ function About() {
                     <div className="w-full lg:w-8/12 lg:pt-8">
                         <div className="grid md:grid-cols-5 sm:grid-cols-2 grid-cols-1 lg:gap-5 shadow-lg rounded-md">
                             <div className="p-4 pb-6 flex justify-center flex-col items-center">
-                                <img className="md:block hidden rounded-full" src="https://i.ibb.co/FYTKDG6/Rectangle-118-2.png" alt="Alexa featured Image" />
-                                <img className="md:hidden block rounded-full" src="https://i.ibb.co/zHjXqg4/Rectangle-118.png" alt="Alexa featured Image" />
+                                <img className="md:block hidden" src="https://i.ibb.co/FYTKDG6/Rectangle-118-2.png" alt="Alexa featured Image" />
+                                <img className="md:hidden block" src="https://i.ibb.co/zHjXqg4/Rectangle-118.png" alt="Alexa featured Image" />
                                 <p className="font-medium text-xl leading-5 text-gray-800 dark:text-black mt-4">Alexa</p>
                             </div>
                             <div className="p-4 pb-6 flex justify-center flex-col items-center">

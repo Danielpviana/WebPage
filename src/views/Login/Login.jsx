@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useNavigate, useOutletContext } from "react-router-dom"
+import logo from '../../assets/images/e-logo.jpg'
 
 const USER_LOGIN_DEFAULT = {
   username: 'juan',
@@ -31,7 +32,7 @@ function Login() {
       <div className="sm:mx-auto sm:w-full sm:max-w-sm">
         <img
           className="mx-auto h-100 w-auto"
-          src="https://img.freepik.com/vector-gratis/ilustracion-concepto-aprendizaje-linea_114360-4755.jpg?t=st=1714888193~exp=1714891793~hmac=a732328dcd6667f7cf8f49207fc53aa93a1e6b4a203719d363ff20b9a9423e86&w=900"
+          src={logo}
           alt="Your Company"
         />
         <h2 className="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
@@ -50,7 +51,7 @@ function Login() {
                 id="email"
                 name="email"
                 required
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                 onChange={(e) => setUsername(e.target.value)}
               />
             </div>
@@ -74,7 +75,7 @@ function Login() {
                 type="password"
                 autoComplete="current-password"
                 required
-                className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5"
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>

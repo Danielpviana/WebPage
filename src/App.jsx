@@ -13,8 +13,8 @@ function App() {
     if (isLogged) {
       // llama a API obtiene información del usuario
       const currentUser = {
-        user: "@luis",
-        name: "Luis",
+        user: "@Juan",
+        name: "Juan",
         profileImage: "https://randomuser.me/api/portraits/men/1.jpg",
       }
       setUser(currentUser)

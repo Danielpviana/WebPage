@@ -7,15 +7,14 @@ import {
   Navigate
 } from "react-router-dom";
 import Home from './views/Home/Home.jsx';
-import TweetDetails from './views/TweetDetails/TweetDetails.jsx';
 import Login from './views/Login/Login.jsx';
 import App from './App.jsx';
 import './index.css'
 import '@fontsource-variable/inter';
 import About from './views/About/About.jsx';
 import Contact from './views/Contact/Contact.jsx';
-import Courses from './views/Courses/Cursos.jsx';
-import CourseDetails from './views/CoursesDetails/Courses.jsx';
+import Courses from './views/Courses/Courses.jsx';
+import CourseDetails from './views/CoursesDetails/CourseDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -31,12 +30,8 @@ const router = createBrowserRouter([
             element: <Home />
           },
           {
-            path: 'tweets/:tweetId',
-            element: <TweetDetails />
-          },
-          {
             path: '',
-            element: <Navigate to="/tweets" replace={true} />
+            element: <Navigate to="/login" replace={true} />
           },
           {
             path: 'about',
@@ -51,7 +46,7 @@ const router = createBrowserRouter([
             element: <Courses />
           },
           {
-            path: 'coursedetails',
+            path: 'courses/:courseId',
             element: <CourseDetails />
           }
         ]
